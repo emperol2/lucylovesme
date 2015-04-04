@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'static_pages' => 'static_pages#home'
+  get 'static_pages/about' => 'static_pages#about'
+  get 'static_pages/contact' => 'static_pages#contact'
+  resources :static_pages
+
   get 'sessions/new'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'

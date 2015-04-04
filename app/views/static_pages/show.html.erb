@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>About:</strong>
+  <%= @static_page.about %>
+</p>
+
+<p>
+  <strong>Tag1:</strong>
+  <%= @static_page.tag1 %>
+</p>
+
+<p>
+  <strong>Tag2:</strong>
+  <%= @static_page.tag2 %>
+</p>
+
+<p>
+  <strong>Tag3:</strong>
+  <%= @static_page.tag3 %>
+</p>
+
+<p>
+  <strong>Tag4:</strong>
+  <%= @static_page.tag4 %>
+</p>
+
+<p>
+  <strong>Thinking:</strong>
+  <%= @static_page.thinking %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @static_page.skills %>
+</p>
+
+<%= link_to 'Edit', edit_static_page_path(@static_page) %> |
+<%= link_to 'Back', static_pages_path %>

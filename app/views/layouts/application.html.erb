@@ -12,59 +12,17 @@
   <meta name="keywords" content="nuttapon, pichetpongsa, software, tester, testing, web developer, css, HTML, web application, jQuery">
   <meta name="author" content="">
   <!-- link rel="shortcut icon" href="../../docs-assets/ico/favicon.png" -->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <%= render "layouts/header" %>
 
-<!-- +++++ Welcome Section +++++ -->
-<div id="ww">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 centered">
-        <img src="/assets/user.png" alt="Stanley">
-        <h1>Hi, I am Nuttapon!</h1>
-        <p class="description">Hello there! My name's Nuttapon Pichetpongsa and I'm a Software Engineer from Bangkok, Thailand. I received my Master's degree in Software Engineering from MDH (Mälardalen University), Sweden. I also had been doing an internship as a Researcher and Software Developer for process control department at ABB, Sweden.</p>
-        <p class="description">Currently, I'm working as QA Manager/ Software Engineer in Test Automation at Openface (Thailand).</p>
-        <p class="description">Feel free to check out my work or view my resume. I am currently available for hire, so if I sound fit for your next project, don’t hesitate to contact me!</p>
-
-      </div><!-- /col-lg-8 -->
-    </div><!-- /row -->
-  </div> <!-- /container -->
-</div><!-- /ww -->
-
-
-<!-- +++++ Projects Section +++++ -->
-
-<div class="container pt">
-  <div class="row mt centered">
-    <div class="col-lg-4">
-      <a class="zoom green" href="work01.html"><img class="img-responsive" src="/assets/portfolio/port01.jpg" alt="" /></a>
-      <p>APE</p>
-    </div>
-    <div class="col-lg-4">
-      <a class="zoom green" href="work01.html"><img class="img-responsive" src="/assets/portfolio/port02.jpg" alt="" /></a>
-      <p>RAIDERS</p>
-    </div>
-    <div class="col-lg-4">
-      <a class="zoom green" href="work01.html"><img class="img-responsive" src="/assets/portfolio/port03.jpg" alt="" /></a>
-      <p>VIKINGS</p>
-    </div>
-  </div><!-- /row -->
-  <div class="row mt centered">
-    <div class="col-lg-4">
-      <a class="zoom green" href="work01.html"><img class="img-responsive" src="/assets/portfolio/port04.jpg" alt="" /></a>
-      <p>YODA</p>
-    </div>
-    <div class="col-lg-4">
-      <a class="zoom green" href="work01.html"><img class="img-responsive" src="/assets/portfolio/port05.jpg" alt="" /></a>
-      <p>EMPERORS</p>
-    </div>
-    <div class="col-lg-4">
-      <a class="zoom green" href="work01.html"><img class="img-responsive" src="/assets/portfolio/port06.jpg" alt="" /></a>
-      <p>CHIEFS</p>
-    </div>
-  </div><!-- /row -->
-</div><!-- /container -->
+<%= yield %>
 
 <%= render "layouts/footer" %>
 <%= debug(params) if Rails.env.development? %>

@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207102635) do
+ActiveRecord::Schema.define(version: 20150404154815) do
 
   create_table "lucies", force: true do |t|
     t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "static_pages", force: true do |t|
+    t.string   "about"
+    t.text     "tag1"
+    t.text     "tag2"
+    t.text     "tag3"
+    t.text     "tag4"
+    t.text     "thinking"
+    t.text     "skills"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

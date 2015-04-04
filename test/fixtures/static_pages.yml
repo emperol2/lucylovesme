@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  about: MyString
+  tag1: MyText
+  tag2: MyText
+  tag3: MyText
+  tag4: MyText
+  thinking: MyText
+  skills: MyText
+
+two:
+  about: MyString
+  tag1: MyText
+  tag2: MyText
+  tag3: MyText
+  tag4: MyText
+  thinking: MyText
+  skills: MyText
