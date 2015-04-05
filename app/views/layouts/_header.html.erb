@@ -7,14 +7,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">NUTTAPON P.</a>
+      <!--<a class="navbar-brand" href="index.html">NUTTAPON P.</a>-->
+      <%= link_to 'NUTTAPON P.', root_path(), :class => 'navbar-brand' %>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="work.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><%= link_to 'About', about_path() %></li>
+        <!--<li><a href="about.html">About</a></li>-->
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <!--<li><a href="contact.html">Contact</a></li>-->
+        <li><%= link_to 'Contact', contact_path() %></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
