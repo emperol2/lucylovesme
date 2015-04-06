@@ -257,3 +257,20 @@ a:visited.btn {
   box-shadow: none;
   margin: 3px 0 30px 0;
 }
+
+.user {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.two {
+  background-image: url('/assets/my_image.jpg');
+}
+
+div.user.two {
+  margin: 0 auto;
+}
