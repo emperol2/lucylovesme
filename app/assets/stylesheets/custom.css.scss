@@ -274,3 +274,10 @@ a:visited.btn {
 div.user.two {
   margin: 0 auto;
 }
+
+.truncated {
+  overflow: hidden;
+  text-overflow: ellipsis; /* this works with IE, Safari and Chrome */
+  white-space: nowrap;
+  -moz-binding: url('/ellipsis.xml#ellipsis'); /* this is a Firefox hack */
+}

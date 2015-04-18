@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :blogs
+
   #resources :abouts
   #get 'homes' => 'homes#show', as: 'home'
   #resources :homes
