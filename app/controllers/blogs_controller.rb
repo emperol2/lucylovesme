@@ -10,6 +10,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @tags = @blog.tag
+    @split_tag = @tags.split(',')
   end
 
   # GET /blogs/new
