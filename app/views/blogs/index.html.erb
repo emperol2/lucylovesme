@@ -2,7 +2,7 @@
 <!-- +++++ First Post +++++ -->
 <% @blogs.each do |blog| %>
 
-    <div id="grey">
+    <div id="<%= cycle('grey','white') %>">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
