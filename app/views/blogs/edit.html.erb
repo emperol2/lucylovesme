@@ -5,6 +5,7 @@
     <%= render 'form' %>
 
     <%= link_to 'Show', @blog, :class => "btn btn-primary btn-lg" %> |
-    <%= link_to 'Back', blogs_path, :class => "btn btn-warning btn-lg" %>
-  </div>
+    <%= link_to 'Back', blogs_path, :class => "btn btn-warning btn-lg" %> |
+    <%= link_to 'Destroy', @blog, :class => "btn btn-danger btn-lg", method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
 </div>

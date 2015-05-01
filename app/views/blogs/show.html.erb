@@ -6,17 +6,32 @@
         <p><img class="blog user" src="/assets/my_image.jpg" width="50px" height="50px"> <ba><%= @blog.name %></ba></p>
         <p><bd><%= @blog.created_at.localtime.strftime("%B %e at %l:%M %p") %></bd></p>
         <h4><%= @blog.title %></h4>
-        <% if @blog.image == "" %>
+        <% if false %>
+            <% if @blog.image == "" %>
+                <p><img class="img-responsive" src="/assets/blog01.jpg" alt=""></p>
+            <% else %>
+                <p><img class="img-responsive" src="<%= @blog.image.html_safe %>" alt=""></p>
+            <% end %>
+        <% end %>
+
+        <% if @blog.image != "" %>
+            <p><img class="img-responsive" src="<%= @blog.image.html_safe %>" alt=""></p>
+        <% elsif @blog.blog_images_url.nil? %>
             <p><img class="img-responsive" src="/assets/blog01.jpg" alt=""></p>
         <% else %>
-            <p><img class="img-responsive" src="<%= @blog.image.html_safe %>" alt=""></p>
+            <p>
+              <% unless @blog.blog_images_url.nil? %>
+                  <%= image_tag @blog.blog_images_url, :class => "img-responsive" %>
+              <% end %>
+            </p>
         <% end %>
+
         <p><%= @blog.desc.html_safe %></p>
         <br>
-        <!--<p><bt>TAGS: <a href="#">Wordpress</a> - <a href="#">Web Design</a></bt></p>-->
         <bt id="tags">TAGS:<% @split_tag.each do |tags| %>
-              <span><a href="#"><%= tags %></a></span>
-          <% end %></bt>
+              <span><a href="#"><%= tags %></a></span>,
+          <% end %>
+        </bt>
         <hr>
         <p><%= link_to '# Back', blogs_path() %></p>
       </div>

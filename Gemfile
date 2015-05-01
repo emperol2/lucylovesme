@@ -44,6 +44,12 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use Cloudinary
+gem 'cloudinary'
+
+# Use Carrierwave (upload file & image)
+gem 'carrierwave'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'

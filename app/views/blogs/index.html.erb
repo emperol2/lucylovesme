@@ -11,9 +11,7 @@
             <h4><%= blog.title %></h4>
             <p><%= truncate blog.desc.html_safe, length: 300, :escape => false, separator: '' %></p>
             <p><%= link_to 'Continue Reading...', blog_path(blog) %></p>
-            <!--<p><a href="blog01.html">Continue Reading...</a></p>-->
           </div>
-
         </div><!-- /row -->
       </div> <!-- /container -->
     </div><!-- /grey -->
