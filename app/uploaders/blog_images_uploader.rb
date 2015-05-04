@@ -8,6 +8,8 @@ class BlogImagesUploader < CarrierWave::Uploader::Base
 
   include Cloudinary::CarrierWave
 
+  cloudinary_transformation :quality => 70
+
   # Choose what kind of storage to use for this uploader:
   #storage :file
   # storage :fog
