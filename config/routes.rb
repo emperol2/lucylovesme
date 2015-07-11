@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   #resources :abouts
   #get 'homes' => 'homes#show', as: 'home'
   #resources :homes
+  match '/files/np_resume.pdf' => redirect('/nuttapon-cv.pdf'), via: :get
   root 'static_pages#home'
 
   get 'static_pages/home' => 'static_pages#home'
