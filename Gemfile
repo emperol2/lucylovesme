@@ -50,6 +50,9 @@ gem 'cloudinary'
 # Use Carrierwave (upload file & image)
 gem 'carrierwave'
 
+# Use Pretty URL
+gem 'friendly_id', '~> 5.0.0'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
