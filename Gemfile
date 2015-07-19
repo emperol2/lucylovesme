@@ -53,6 +53,9 @@ gem 'carrierwave'
 # Use Pretty URL
 gem 'friendly_id', '~> 5.0.0'
 
+# Use Dynamic Sitemap
+gem 'dynamic_sitemaps'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
