@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
   resources :blogs
 
+  ## For sitemaps ##
+  resources :sitemaps, :only => :index
+  get "sitemap.xml" => "sitemaps#index", :format => "xml", :as => :sitemap
+
+  ## 301 redirections ##
+  match '/files/np_resume.pdf' => redirect('/nuttapon-cv.pdf'), via: :get
+
   #resources :abouts
   #get 'homes' => 'homes#show', as: 'home'
   #resources :homes
-  match '/files/np_resume.pdf' => redirect('/nuttapon-cv.pdf'), via: :get
+
   root 'static_pages#home'
 
   get 'static_pages/home' => 'static_pages#home'
