@@ -9,4 +9,9 @@ module ApplicationHelper
     return content_tag(:h1, page_title, options)
   end
 
+  def meta_desc(page_description, options={})
+    content_for(:meta_desc, truncate(page_description, :length => 200).to_s)
+    return content_tag(:p, page_description, options)
+  end
+
 end
