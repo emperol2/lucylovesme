@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <% if content_for?(:meta_og) %>
+      <%= yield :meta_og %>
+  <% else %>
+      <meta property="og:title" content="<%= content_for(:title) %> | Nuttapon Pichetpongsa " />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="http://www.nuttaponp.com" />
+      <meta property="og:description" content="<%= content_for(:meta_desc) %>" />
+      <%= tag :meta, property: 'og:image', content: image_url('../assets/my_image.jpg') %>
+  <% end %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<%= content_for(:meta_desc) %>">
   <meta name="keywords" content="nuttapon, pichetpongsa, software, tester, testing, web developer, css, HTML, web application, jQuery">
