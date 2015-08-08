@@ -56,6 +56,9 @@ gem 'friendly_id', '~> 5.0.0'
 # Use Dynamic Sitemap
 gem 'dynamic_sitemaps'
 
+# Use Social Media Share button
+gem 'social-share-button', '~> 0.1.6'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
