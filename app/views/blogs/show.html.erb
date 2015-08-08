@@ -1,13 +1,13 @@
 <% title @blog.title %>
-<% meta_desc "#{truncate @blog.desc, length: 50, :escape => false, separator: '' }" %>
+<% meta_desc "#{truncate ActionView::Base.full_sanitizer.sanitize(@blog.desc), length: 150, :escape => false, separator: '' }" %>
 
 <%= content_for(:meta_og) do %>
-    <meta property="og:title" content="<%= @blog.title %>" />
+    <meta property="og:title" content="<%= @blog.title %> | Nuttapon Pichetpongsa" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="<%= "http://#{request.host_with_port}/#{@blog.slug}" %>" />
+    <meta property="og:url" content="<%= "http://#{request.host_with_port}/blogs/#{@blog.slug}" %>" />
     <meta property="og:published_time" content="<%= @blog.created_at.localtime.strftime('%B %e at %l:%M %p') %>" />
     <meta property="og:author" content="<%= @blog.name %>" />
-    <meta property="og:description" content="<%= truncate @blog.desc, length: 50, :escape => false, separator: '' %>" />
+    <meta property="og:description" content="<%= truncate ActionView::Base.full_sanitizer.sanitize(@blog.desc), length: 150, :escape => false, separator: '' %>" />
     <% if @blog.blog_images_url.nil? %>
         <%= tag :meta, property: 'og:image', content: image_url('../assets/my_image.jpg') %>
     <% else %>
