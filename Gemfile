@@ -59,6 +59,9 @@ gem 'dynamic_sitemaps'
 # Use Social Media Share button
 gem 'social-share-button', '~> 0.1.6'
 
+# Use Pagination > Kaminari
+gem 'kaminari', '~> 0.16.1'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
