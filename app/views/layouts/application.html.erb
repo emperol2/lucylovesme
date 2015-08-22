@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= content_for(:title) %> | Nuttapon Pichetpongsa</title>
+  <% if content_for(:title).include?'Personal' %>
+      <title><%= content_for(:title) %></title>
+  <% else %>
+      <title><%= content_for(:title) %> | Nuttapon Pichetpongsa</title>
+  <% end %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,7 +14,11 @@
   <% if content_for?(:meta_og) %>
       <%= yield :meta_og %>
   <% else %>
-      <meta property="og:title" content="<%= content_for(:title) %> | Nuttapon Pichetpongsa " />
+      <% if content_for(:title).include?'Personal' %>
+          <meta property="og:title" content="<%= content_for(:title) %>" />
+      <% else %>
+          <meta property="og:title" content="<%= content_for(:title) %> | Nuttapon Pichetpongsa " />
+      <% end %>
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://www.nuttaponp.com" />
       <meta property="og:description" content="<%= content_for(:meta_desc) %>" />

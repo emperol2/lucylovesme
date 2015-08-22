@@ -275,6 +275,14 @@ div.user.two {
   margin: 0 auto;
 }
 
+.three {
+  background-image: url('/assets/my-about.jpg');
+}
+
+div.user.three {
+  margin: 0 auto;
+}
+
 .truncated {
   overflow: hidden;
   text-overflow: ellipsis; /* this works with IE, Safari and Chrome */
