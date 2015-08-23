@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <% if content_for(:title).include?'Personal' %>
+  <% if content_for(:title).nil? or content_for(:title).include?'Personal' %>
       <title><%= content_for(:title) %></title>
   <% else %>
       <title><%= content_for(:title) %> | Nuttapon Pichetpongsa</title>
@@ -14,7 +14,7 @@
   <% if content_for?(:meta_og) %>
       <%= yield :meta_og %>
   <% else %>
-      <% if content_for(:title).include?'Personal' %>
+      <% if content_for(:title).nil? or content_for(:title).include?'Personal' %>
           <meta property="og:title" content="<%= content_for(:title) %>" />
       <% else %>
           <meta property="og:title" content="<%= content_for(:title) %> | Nuttapon Pichetpongsa " />
