@@ -7,6 +7,16 @@ xml.tag! 'urlset', 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
     xml.priority(1.0)
   }
   xml.url{
+    xml.loc("#{base_url}/about")
+    xml.changefreq("weekly")
+    xml.priority(1.0)
+  }
+  xml.url{
+    xml.loc("#{base_url}/contact")
+    xml.changefreq("weekly")
+    xml.priority(1.0)
+  }
+  xml.url{
     xml.loc("#{base_url}/blogs")
     xml.changefreq("daily")
     xml.priority(0.9)
