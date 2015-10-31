@@ -18,7 +18,7 @@
             <% if blog.desc.include? 'name="code"' %>
                 <p><%= blog.desc.html_safe %></p>
             <% else %>
-                <p><%= truncate blog.desc.html_safe, length: 300, :escape => false, separator: '' %></p>
+                <p><%= truncate (sanitize blog.desc, tags: %w(p br)).html_safe, length: 200, :escape => false, separator: '' %></p>
             <% end %>
             <p><a href="<%= blog_path(blog) + '#disqus_thread' %>"></a></p>
             <p><%= link_to 'Continue Reading...', blog_path(blog), method: :get %></p>
