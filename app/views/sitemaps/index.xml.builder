@@ -24,7 +24,7 @@ xml.tag! 'urlset', 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
   @blogs.each do |b|
     xml.url {
       xml.loc("#{base_url}/blogs/#{b.slug.to_s}")
-      xml.changefreq("weekly")
+      xml.changefreq("daily")
       xml.priority(0.5)
     }
   end
