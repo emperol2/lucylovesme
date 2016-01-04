@@ -26,7 +26,11 @@
   <% end %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<%= content_for(:meta_desc) %>">
-  <meta name="keywords" content="nuttapon, pichetpongsa, software, tester, testing, web developer, css, HTML, web application, jQuery">
+  <% if request.original_url.include?'blogs' %>
+      <meta name="keywords" content="nuttapon, pichetpongsa, software, tester, testing, software testing, <%= content_for(:keywords) %>">
+  <% else %>
+      <meta name="keywords" content="nuttapon, pichetpongsa, software, tester, testing, web developer, css, HTML, web application, jQuery">
+  <% end %>
   <meta name="author" content="">
   <!-- link rel="shortcut icon" href="../../docs-assets/ico/favicon.png" -->
 

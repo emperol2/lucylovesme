@@ -1,4 +1,5 @@
 <% title @blog.title %>
+<% keywords @blog.tag %>
 <% meta_desc "#{truncate ActionView::Base.full_sanitizer.sanitize(@blog.desc), length: 150, :escape => false, separator: '' }" %>
 
 <%= content_for(:meta_og) do %>

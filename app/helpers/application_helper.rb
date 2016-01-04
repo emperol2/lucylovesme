@@ -14,4 +14,9 @@ module ApplicationHelper
     return content_tag(:p, page_description, options)
   end
 
+  def keywords(page_keywords, options={})
+    content_for(:keywords, page_keywords.to_s)
+    return content_tag(:p, page_keywords, options)
+  end
+
 end
